@@ -1,2 +1,2 @@
 # CodeFights
-Solutions on CodeFights websites
+Solutions on CodeFights website
