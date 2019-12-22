@@ -5,7 +5,7 @@ public class IsIdentityMatrix {
 	boolean isIdentityMatrix(int[][] m) {
 	    for(i=0;i<m.length;i++){
 	    	d+=m[i][i];
-	    	for(j=0;j<m[i].length;j++) {
+	    	for(j=0;j<m.length;j++) {
 	    		s+=m[i][j];
 	    	} 
 	    }
