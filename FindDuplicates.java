@@ -1,27 +1,29 @@
-package codeSignalPacka;
+package packCoreJava;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class FindDuplicates {
 
-	boolean containsDuplicates(int[] a) {
-	    boolean dupPresent = false;
-	    
-	    itr1:
-	for(int i=0;i<a.length;i++){
-	    for(int j=i+1;j<a.length;j++){
-	    	if(a[i]==a[j]) {
-	    		dupPresent = true;
-	    		break itr1;
-	    	}
-	    }
-	}
-	return dupPresent;
-	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//int[] arrayOfInts = {1, 2, 3, 4};
-		int[] arrayOfInts = {1, 2, 3, 1};
-		boolean isDupPresent = new FindDuplicates().containsDuplicates(arrayOfInts);
-		System.out.println(isDupPresent);
+		Map<Character, Integer> map_Repetition_str = new HashMap<Character, Integer>();
+		String str = "Hi Welcome to CTS";
+		//int countOfChar = 0;
+		char char_str[] = str.toLowerCase().toCharArray();
+		for(char ch:char_str){
+			//System.out.println("The characters are "+ch);
+			if(map_Repetition_str.containsKey(ch)){
+				System.out.println("get method from Map "+map_Repetition_str.get(ch));
+				map_Repetition_str.put(ch, map_Repetition_str.get(ch)+1);
+			}
+			else{
+				map_Repetition_str.put(ch, 1);
+			}
+		}
+		System.out.println(map_Repetition_str.values());
+		System.out.println(map_Repetition_str.keySet());
+		System.out.println(map_Repetition_str.toString());
 	}
 
 }
